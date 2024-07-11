@@ -8,9 +8,13 @@ function App() {
     new ToDo("Learn TypeScript")
   ];
 
+  const addTodoHandler = (todoText: string) => {
+    
+  };
+
   return (
     <div>
-      <NewTodo />
+      <NewTodo onAddToDo={addTodoHandler}/>
       <Todos items={todos} />
     </div>
   );
