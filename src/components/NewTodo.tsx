@@ -4,7 +4,6 @@ import { TodosContext } from "../store/todos-context";
 import classes from "./NewTodo.module.css";
 
 const NewTodo: React.FC = () => {
-
   const todosCtx = useContext(TodosContext);
 
   const todoTextInputRef = useRef<HTMLInputElement>(null);
@@ -20,6 +19,7 @@ const NewTodo: React.FC = () => {
     }
 
     todosCtx.addTodo(enteredText);
+    todoTextInputRef.current!.value = "";
   };
 
   return (
